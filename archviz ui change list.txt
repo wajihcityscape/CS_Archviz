@@ -1,0 +1,81 @@
+V 2.10 (21/10/2021)
+- Changed floor plan material render mode to masked by default so it shows up in ray tracing. Added option to set it to translucent
+- Added variables for Turn and Look Up rate.
+- Added option for simple turn instead of strafe
+- Save slot buttons now have default colours
+
+V 2.9
+- improved save slots widget
+- fixed drone acceleration not working
+- fixed mouse travel occasionally shooting player out of the level when target becomes invisible in the far distance and user clicks
+- exposed travel time for target move
+- added option to disable user manager (default will always be saved to slot 0 and can be loaded with SHIFT+0)
+- added F to help screen images
+- added simple image viewer as a placeable actor. Can be added in front of windows to display an image, etc. 
+  Integrated into the rest of the UI controls.
+- added switch to use interaction input to either update swap actor list or for interactions like opening doors or
+  activate the image viewer. Dispatcher can be bind to any custom interaction actors.
+- exposed preview image sizes, unified gaps between previews.
+
+V 2.8 (20/12/2020)
+- slots can now be saved or loaded with game controller
+  - integrated user management into help screen (permanent)
+  - integrated save game slots into design schemes screen (optional)
+  - DEL will delete the selected client from the list.
+  - N directs to help screen.  
+- added Unit ID to project settings. Save slots are now assigned per unit id per client. Player has 5 options to save now per unit.
+- control types now better to understand: Keyboard/Mouse, Gamepad, Mouse for everything or VR controller
+- new help images for above control types. The appropriate image will be displayed depending on control type
+- mouse visibility now depends on control type chosen. Controller use will always hide mouse
+- option to center mouse pointer when menu pops up.
+- fixed tick box for hiding help screen being overriden sometimes.
+- fixed close button being darker in some widgets
+- fixed having to press interaction twice to open menu after drone mode was activated
+- fixed camera height getting reset to standard height after drone mode was activated
+- updated quit / escape image
+- updated render stage to use only one capture camera and use dynamic materials for render thumbs. Lifted max choices restriction. 
+  Removed all obsolete targets and materials from content folder.
+
+
+V 2.7 (7/12/2020)
+- fixed light switcher not updating material when changing scenarios
+- fixed ESC key not opening quit menu
+- improved preview choice images being blurry sometimes. Won't help if the texture pool is too small or texture data is too large.
+- fixed error messages "accessing none" when using VR style level
+- fixed gamepad initially not working in mouse only mode, added shoulder buttons to move to target
+- added switch to hide help menu
+- screenshots now named clientname_date_time.png
+- screenshot resolution can now be set as multiplyer (3) or given resolution (1920x1080)
+- custom save path can be set for screenshots (and lists).
+- 'N' can set a custom client name (default name is client)
+- Shift+1 to 5 will save game states for current client
+- 1 to 5 keys will load game states for current client
+
+V 2.6 (05/2020)
+- fixed preview images not showing up unless they are for the first variation
+- fixed 'selected only' marker visibility
+- exposed multiplier for selected marker relative scale
+- improved preview image lighting in render stage
+- removed 'exposed on spawn' variable from ButtonImageV2 widget to avoid crash in UE4.25
+
+V 2.5
+- fixed various little bugs in VR style UI mode
+- fixed offsets applied each time a choice was selected leading to assets moving away
+
+V 2.3 new features:
+- Mesh and material swaps are now combined into one list
+- Customize icon order in main menu
+- VR style interface option added
+
+V 2.2
+- Better multi material support
+- fixed "always visible" in swap list
+
+V 2.0 (09/2019) new features:
+- added mesh swaps (earlier version have only material swaps)
+- added parent -> child swaps. Swaps can trigger other swaps
+- travel to another scene (building or unit). Each scene will have its own interface.
+
+V 1.4 and earlier
+- swap actors were loaded at level start not dynamically.
+- only one design version

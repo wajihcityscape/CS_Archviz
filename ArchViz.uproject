@@ -1,0 +1,14 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.27",
+	"Category": "",
+	"Description": "",
+	"Enterprise": true,
+	"Plugins": [
+		{
+			"Name": "EFM",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/27eefe99d0c649968a7a3ad503ce6940"
+		}
+	]
+}
